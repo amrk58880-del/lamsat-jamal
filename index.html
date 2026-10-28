@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e94f87">
+  <meta name="description" content="متجر مستحضرات تجميل وعناية بالبشرة والشعر والمكياج.">
+  <title>لمسة جمال | متجر مستحضرات التجميل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span>💗 اكتشفي جمالك كل يوم</span>
+    <span>الطلب بسهولة عبر واتساب</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="الصفحة الرئيسية">
+      <span class="brand-mark">♡</span>
+      <span><strong id="storeName">لمسة جمال</strong><small>BEAUTY & CARE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">☰</button>
+    <nav id="mainNav">
+      <a class="active" href="#home">الرئيسية</a>
+      <a href="#categories">الأقسام</a>
+      <a href="#products">المنتجات</a>
+      <a href="#offers">العروض</a>
+      <a href="#contact">تواصلي معنا</a>
+    </nav>
+    <button class="cart-button" id="openCart" aria-label="فتح سلة المشتريات">🛍️ <span>السلة</span> <b id="cartCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">جمالك يستحق الأفضل</span>
+        <h1>كل لمسة جمال<br><em>تبدأ من هنا</em> ♡</h1>
+        <p>اكتشفي منتجات العناية والمكياج والعطور اللي تناسبك، واختاري مفضلاتك بكل سهولة.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#products">تسوّقي الآن <span>←</span></a>
+          <a class="btn btn-light" href="#categories">اكتشفي الأقسام</a>
+        </div>
+        <div class="hero-notes"><span>♡ منتجات مختارة</span><span>♡ تجربة تسوّق سهلة</span></div>
+      </div>
+      <div class="hero-image-wrap">
+        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1000&q=85" alt="منتجات عناية بالبشرة">
+        <div class="floating-note"><span>✦</span><div><strong>وقت لنفسك</strong><small>دلّلي جمالك كل يوم</small></div></div>
+      </div>
+      <span class="hero-decor decor-one">✿</span><span class="hero-decor decor-two">♡</span>
+    </section>
+
+    <section class="benefits" aria-label="مميزات المتجر">
+      <div><span class="benefit-icon">♡</span><strong>منتجات مختارة</strong><small>اختيارات تناسب روتينك</small></div>
+      <div><span class="benefit-icon">✿</span><strong>اهتمام بكل التفاصيل</strong><small>تسوّق مريح وبسيط</small></div>
+      <div><span class="benefit-icon">⌁</span><strong>طلب عبر واتساب</strong><small>تأكيد الطلب بسهولة</small></div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="section-heading"><div><span class="eyebrow">اختاري ما يناسبك</span><h2>تسوّقي حسب القسم</h2></div><p>كل احتياجات جمالك في مكان واحد</p></div>
+      <div class="category-grid">
+        <button class="category-card" data-category="العناية بالبشرة"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=600&q=80" alt="العناية بالبشرة"><span>العناية بالبشرة</span><small>اكتشفي المنتجات ←</small></button>
+        <button class="category-card" data-category="المكياج"><img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80" alt="المكياج"><span>المكياج</span><small>اكتشفي المنتجات ←</small></button>
+        <button class="category-card" data-category="العطور"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80" alt="العطور"><span>العطور</span><small>اكتشفي المنتجات ←</small></button>
+        <button class="category-card" data-category="العناية بالشعر"><img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=600&q=80" alt="العناية بالشعر"><span>العناية بالشعر</span><small>اكتشفي المنتجات ←</small></button>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="section-heading"><div><span class="eyebrow">اختيارات مميزة</span><h2>منتجاتنا</h2></div><p>اختاري منتجاتك المفضلة وأضيفيها للسلة</p></div>
+      <div class="shop-tools">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="ابحثي عن منتج..."></label>
+        <select id="categoryFilter" aria-label="تصفية حسب القسم">
+          <option value="الكل">كل الأقسام</option><option>العناية بالبشرة</option><option>المكياج</option><option>العطور</option><option>العناية بالشعر</option>
+        </select>
+        <select id="sortFilter" aria-label="ترتيب المنتجات">
+          <option value="default">الترتيب الافتراضي</option><option value="low">السعر: من الأقل للأعلى</option><option value="high">السعر: من الأعلى للأقل</option>
+        </select>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>مفيش منتجات مطابقة للبحث. جرّبي كلمة تانية.</p>
+    </section>
+
+    <section class="offer-banner" id="offers">
+      <div><span class="eyebrow">لحظات تدليل</span><h2>خلي روتين جمالك<br>أجمل كل يوم ♡</h2><p>تابعي العروض الجديدة واختاري المنتجات المناسبة لك.</p><a class="btn btn-primary" href="#products">شاهدي المنتجات</a></div>
+      <div class="offer-art"><span>BEAUTY</span><b>♡</b><i>✿</i></div>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <div><h2>عندك سؤال؟ إحنا هنا 💗</h2><p>تواصلي معنا للاستفسار عن المنتجات أو لمتابعة طلبك.</p></div>
+      <a class="btn btn-primary" id="contactWhatsApp" href="#" target="_blank" rel="noopener">تواصلي عبر واتساب</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">♡</span><span><strong id="footerStoreName">لمسة جمال</strong><small>BEAUTY & CARE</small></span></a>
+    <p>جمالك يبدأ باهتمامك بنفسك.</p>
+    <small>© <span id="year"></span> لمسة جمال. جميع الحقوق محفوظة.</small>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="سلة المشتريات" aria-hidden="true">
+    <div class="drawer-header"><div><span class="eyebrow">اختياراتك الجميلة</span><h2>سلة المشتريات</h2></div><button id="closeCart" class="close-button" aria-label="إغلاق السلة">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>♡</span><h3>سلتك لسه فاضية</h3><p>ضيفي المنتجات اللي عجبتك وهنجهز طلبك.</p><button class="btn btn-primary" id="continueShopping">تسوّقي الآن</button></div>
+    <div class="cart-footer" id="cartFooter" hidden>
+      <div class="total-line"><span>إجمالي المنتجات</span><strong id="cartTotal">0 جنيه</strong></div>
+      <p class="cart-hint">تكلفة الشحن، إن وجدت، يتم تأكيدها مع المتجر.</p>
+      <button class="btn btn-primary full-width" id="checkoutButton">إتمام الطلب</button>
+      <button class="btn btn-whatsapp full-width" id="whatsappButton">☏ إرسال الطلب عبر واتساب</button>
+    </div>
+  </aside>
+
+  <dialog id="checkoutDialog" class="checkout-dialog">
+    <form id="checkoutForm">
+      <div class="drawer-header"><div><span class="eyebrow">باقي خطوة واحدة</span><h2>بيانات الطلب</h2></div><button type="button" id="closeCheckout" class="close-button">×</button></div>
+      <label>الاسم بالكامل<input name="customerName" required placeholder="اكتبي اسمك"></label>
+      <label>رقم الموبايل<input name="phone" required inputmode="tel" placeholder="01xxxxxxxxx"></label>
+      <label>عنوان التوصيل<textarea name="address" required rows="3" placeholder="المحافظة، المنطقة، الشارع، رقم العقار"></textarea></label>
+      <label>ملاحظات إضافية <small>(اختياري)</small><textarea name="notes" rows="2" placeholder="أي تفاصيل إضافية عن الطلب"></textarea></label>
+      
+<div class="payment-methods">
+  <h3>اختار طريقة الدفع</h3>
+  <p class="payment-subtitle">اختر وسيلة الدفع المناسبة لك</p>
+
+  <div class="payment-grid">
+
+    <label class="payment-option">
+      <input type="radio" name="paymentMethod" value="instapay" required>
+      <span class="payment-logo instapay-logo">InstaPay</span>
+      <span class="payment-name">إنستا باي</span>
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="paymentMethod" value="visa">
+      <span class="payment-logo visa-logo">VISA</span>
+      <span class="payment-name">فيزا</span>
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="paymentMethod" value="applepay">
+      <span class="payment-logo apple-logo"> Apple Pay</span>
+      <span class="payment-name">أبل باي</span>
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="paymentMethod" value="bank">
+      <span class="payment-logo bank-logo">🏦</span>
+      <span class="payment-name">تحويل بنكي</span>
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="paymentMethod" value="mada">
+      <span class="payment-logo mada-logo">مدى</span>
+      <span class="payment-name">مدى</span>
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="paymentMethod" value="mastercard">
+      <span class="payment-logo mastercard-logo">
+        <span class="mc-red"></span>
+        <span class="mc-orange"></span>
+      </span>
+      <span class="payment-name">ماستر كارد</span>
+    </label>
+
+  </div>
+
+  <p class="payment-note">
+    يتم تأكيد وسيلة الدفع وتفاصيلها مع المتجر قبل إتمام عملية الدفع.
+  </p>
+</div>
+
+
+
+      <p class="checkout-note">سيتم فتح واتساب برسالة تحتوي على المنتجات وبيانات الطلب لمراجعتها وإرسالها.</p>
+      <button class="btn btn-primary full-width" type="submit">متابعة عبر واتساب</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
