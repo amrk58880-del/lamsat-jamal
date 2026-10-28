@@ -1289,3 +1289,185 @@ textarea {
   .rating { font-size: 9px; padding: 3px 6px; }
   .add-button { min-height: 38px; padding: 9px 5px; border-radius: 9px; font-size: 10px; }
 }
+/* تحسين احترافي لمتجر لمسة جمال + شريط العروض */
+#products {
+  padding-top: 24px;
+}
+#productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+#productGrid .product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #f4dce6;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 7px 24px rgba(184, 50, 101, .08);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+#productGrid .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(184, 50, 101, .15);
+}
+#productGrid .product-image {
+  position: relative;
+  height: 230px;
+  padding: 14px;
+  background: linear-gradient(145deg, #fffafd, #fdebf3);
+  overflow: hidden;
+}
+#productGrid .product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 12px;
+  transition: transform .3s ease;
+}
+#productGrid .product-card:hover .product-image img {
+  transform: scale(1.045);
+}
+#productGrid .product-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+}
+#productGrid .product-info h3 {
+  min-height: 48px;
+  margin: 0;
+  color: #3f2631;
+  font-size: 16px;
+  line-height: 1.8;
+}
+#productGrid .product-category {
+  color: #b83265;
+  font-size: 12px;
+  font-weight: 700;
+}
+#productGrid .product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+#productGrid .price {
+  color: #b83265;
+  font-weight: 800;
+}
+#productGrid .old-price {
+  display: inline-block;
+  margin-inline-start: 5px;
+  color: #9b8990;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+#productGrid .add-button {
+  width: 100%;
+  margin-top: auto;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #e94f87, #b83265);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter .2s ease, transform .2s ease;
+}
+#productGrid .add-button:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+#productGrid .product-badge {
+  z-index: 2;
+  max-width: 75%;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: #fff;
+  color: #b83265;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 3px 12px rgba(80, 20, 45, .08);
+}
+#productGrid .lj-discount-tag {
+  position: absolute;
+  z-index: 3;
+  top: 12px;
+  left: 12px;
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: #b83265;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 3px 12px rgba(80, 20, 45, .15);
+}
+.lj-promo-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 22px 0;
+  padding: 24px 28px;
+  border: 1px solid #f3d0df;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 90% 15%, rgba(255,255,255,.9), transparent 32%),
+    linear-gradient(115deg, #fff7fb, #fbdce9);
+  box-shadow: 0 8px 26px rgba(184, 50, 101, .07);
+}
+.lj-promo-copy { min-width: 0; }
+.lj-promo-kicker {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #b83265;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+.lj-promo-copy h2 {
+  margin: 0 0 7px;
+  color: #52253a;
+  font-size: clamp(20px, 2.4vw, 29px);
+  line-height: 1.5;
+}
+.lj-promo-copy p {
+  margin: 0;
+  color: #765665;
+  line-height: 1.8;
+}
+.lj-promo-chip {
+  flex-shrink: 0;
+  border: 1px solid rgba(184, 50, 101, .18);
+  border-radius: 999px;
+  padding: 11px 16px;
+  background: rgba(255,255,255,.8);
+  color: #b83265;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+}
+@media (max-width: 640px) {
+  #productGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+  #productGrid .product-image { height: 165px; padding: 8px; }
+  #productGrid .product-info { padding: 10px; gap: 8px; }
+  #productGrid .product-info h3 { min-height: 44px; font-size: 13px; }
+  #productGrid .product-bottom { align-items: flex-start; flex-direction: column; gap: 4px; }
+  #productGrid .add-button { padding: 10px 6px; font-size: 12px; }
+  .lj-promo-banner { align-items: flex-start; flex-direction: column; padding: 18px; gap: 12px; }
+  .lj-promo-chip { white-space: normal; }
+}

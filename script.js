@@ -9,14 +9,24 @@ const STORE_NAME = "لمسة جمال";
 const WHATSAPP_NUMBER = "201031495730"; // استبدل الرقم برقم واتساب المتجر الحقيقي
 
 const products = [
-  { id: 1, name: "سيروم ترطيب وإشراقة البشرة", category: "العناية بالبشرة", price: 320, oldPrice: 390, badge: "الأكثر طلبًا", rating: "★★★★★", image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=700&q=80" },
-  { id: 2, name: "كريم مرطب يومي", category: "العناية بالبشرة", price: 250, oldPrice: null, badge: "اختيار مميز", rating: "★★★★★", image: "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=700&q=80" },
-  { id: 3, name: "أحمر شفاه بلون وردي", category: "المكياج", price: 180, oldPrice: 220, badge: "عرض خاص", rating: "★★★★☆", image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=700&q=80" },
-  { id: 4, name: "ماسكارا لتحديد الرموش", category: "المكياج", price: 210, oldPrice: null, badge: "", rating: "★★★★★", image: "https://images.unsplash.com/photo-1631214540242-6c0a6b6f7a3f?auto=format&fit=crop&w=700&q=80" },
-  { id: 5, name: "عطر ناعم للاستخدام اليومي", category: "العطور", price: 450, oldPrice: 520, badge: "خصم", rating: "★★★★★", image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=80" },
-  { id: 6, name: "زيت عناية وتغذية الشعر", category: "العناية بالشعر", price: 275, oldPrice: null, badge: "", rating: "★★★★☆", image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=80" },
-  { id: 7, name: "غسول لطيف للوجه", category: "العناية بالبشرة", price: 195, oldPrice: null, badge: "", rating: "★★★★★", image: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=700&q=80" },
-  { id: 8, name: "باليت ظلال عيون", category: "المكياج", price: 360, oldPrice: 420, badge: "عرض خاص", rating: "★★★★☆", image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=700&q=80" }
+  { id: 1, name: "سيروم ترطيب وإشراقة البشرة", category: "العناية بالبشرة", price: 320, oldPrice: 390, badge: "الأكثر طلبًا", rating: "★★★★★", image: "images/all-products/product-01.jpg" },
+  { id: 2, name: "كريم مرطب يومي", category: "العناية بالبشرة", price: 250, oldPrice: null, badge: "اختيار مميز", rating: "★★★★★", image: "images/all-products/product-02.jpg" },
+  { id: 3, name: "أحمر شفاه بلون وردي", category: "المكياج", price: 180, oldPrice: 220, badge: "عرض خاص", rating: "★★★★☆", image: "images/all-products/product-03.jpg" },
+  { id: 4, name: "ماسكارا لتحديد الرموش", category: "المكياج", price: 210, oldPrice: null, badge: "", rating: "★★★★★", image: "images/all-products/product-04.jpg" },
+  { id: 5, name: "عطر ناعم للاستخدام اليومي", category: "العطور", price: 450, oldPrice: 520, badge: "خصم", rating: "★★★★★", image: "images/all-products/product-05.jpg" },
+  { id: 6, name: "زيت عناية وتغذية الشعر", category: "العناية بالشعر", price: 275, oldPrice: null, badge: "", rating: "★★★★☆", image: "images/all-products/product-06.jpg" },
+  { id: 7, name: "غسول لطيف للوجه", category: "العناية بالبشرة", price: 195, oldPrice: null, badge: "", rating: "★★★★★", image: "images/all-products/product-07.jpg" },
+  { id: 8, name: "باليت ظلال عيون", category: "المكياج", price: 360, oldPrice: 420, badge: "عرض خاص", rating: "★★★★☆", image: "images/all-products/product-08.jpg" }
+
+  ,{ id: 9, name: "غسول سيرافي للبشرة الدهنية", category: "العناية بالبشرة", price: 450, oldPrice: null, badge: "جديد", rating: "★★★★★", image: "images/all-products/product-09.jpg" }
+  ,{ id: 10, name: "واقي شمس للبشرة", category: "العناية بالبشرة", price: 550, oldPrice: 650, badge: "خصم 15%", rating: "★★★★★", image: "images/all-products/product-10.jpg" }
+  ,{ id: 11, name: "كريم أساس ميبلين", category: "المكياج", price: 280, oldPrice: 320, badge: "عرض خاص", rating: "★★★★☆", image: "images/all-products/product-11.jpg" }
+  ,{ id: 12, name: "ملمع شفاه وردي", category: "المكياج", price: 220, oldPrice: null, badge: "جديد", rating: "★★★★★", image: "images/all-products/product-12.jpg" }
+  ,{ id: 13, name: "عطر شانيل ناعم", category: "العطور", price: 1050, oldPrice: 1200, badge: "خصم 13%", rating: "★★★★★", image: "images/all-products/product-13.jpg" }
+  ,{ id: 14, name: "عطر مس ديور", category: "العطور", price: 1850, oldPrice: null, badge: "جديد", rating: "★★★★★", image: "images/all-products/product-14.jpg" }
+  ,{ id: 15, name: "شامبو للشعر الجاف", category: "العناية بالشعر", price: 190, oldPrice: 220, badge: "عرض خاص", rating: "★★★★☆", image: "images/all-products/product-15.jpg" }
+  ,{ id: 16, name: "زيت أرجان للشعر", category: "العناية بالشعر", price: 550, oldPrice: null, badge: "جديد", rating: "★★★★★", image: "images/all-products/product-16.jpg" }
+
 ];
 
 const money = value => `${Number(value).toLocaleString("ar-EG")} جنيه`;
@@ -50,21 +60,42 @@ function renderProducts() {
   if (sort === "high") filtered.sort((a,b) => b.price - a.price);
   const grid = document.getElementById("productGrid");
   document.getElementById("emptyState").hidden = filtered.length !== 0;
-  grid.innerHTML = filtered.map(p => `
+
+  // شريط العروض يظهر مرة واحدة قبل شبكة المنتجات.
+  if (!document.getElementById("ljPromoBanner")) {
+    grid.insertAdjacentHTML("beforebegin", `
+      <section class="lj-promo-banner" id="ljPromoBanner" aria-label="عروض المتجر">
+        <div class="lj-promo-copy">
+          <span class="lj-promo-kicker">عروض لمسة جمال</span>
+          <h2>جمالك يستاهل الدلع 💗</h2>
+          <p>اكتشفي المنتجات المختارة بأسعار مميزة — اختاري عرضك وأضيفيه للسلة.</p>
+        </div>
+        <div class="lj-promo-chip">خصومات على منتجات مختارة</div>
+      </section>
+    `);
+  }
+
+  grid.innerHTML = filtered.map(p => {
+    const discount = p.oldPrice && p.oldPrice > p.price
+      ? Math.round((1 - p.price / p.oldPrice) * 100)
+      : 0;
+    return `
     <article class="product-card">
       <div class="product-image">
-        <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='https://placehold.co/600x600/fff0f5/b83265?text=Beauty+Product'">
+        <img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/600x600/fff0f5/b83265?text=Beauty+Product'">
         ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ""}
+        ${discount ? `<span class="lj-discount-tag">-${discount.toLocaleString("ar-EG")}%</span>` : ""}
         <button class="favorite" data-favorite="${p.id}" aria-label="إضافة ${p.name} للمفضلة">♡</button>
       </div>
       <div class="product-info">
         <span class="product-category">${p.category}</span>
         <h3>${p.name}</h3>
-        <div class="product-bottom"><span class="price">${money(p.price)} ${p.oldPrice ? `<span class="old-price">${money(p.oldPrice)}</span>` : ""}</span><span class="rating">${p.rating}</span></div>
+        <div class="product-bottom"><span class="price">${money(p.price)} ${p.oldPrice && p.oldPrice > p.price ? `<span class="old-price">${money(p.oldPrice)}</span>` : ""}</span><span class="rating">${p.rating}</span></div>
         <button class="add-button" data-add="${p.id}">＋ أضيفي إلى السلة</button>
       </div>
     </article>
-  `).join("");
+  `;
+  }).join("");
 }
 function addToCart(id) {
   const existing = cart.find(item => item.id === id);
@@ -101,7 +132,7 @@ function renderCart() {
     const p = products.find(product => product.id === item.id);
     if (!p) return "";
     return `<div class="cart-row">
-      <img src="${p.image}" alt="${p.name}" onerror="this.src='https://placehold.co/120x120/fff0f5/b83265?text=Beauty'">
+      <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/120x120/fff0f5/b83265?text=Beauty'">
       <div><h3>${p.name}</h3><div class="cart-price">${money(p.price)}</div>
       <div class="qty-control"><button data-qty="${p.id}" data-change="-1" aria-label="تقليل الكمية">−</button><span>${item.qty.toLocaleString("ar-EG")}</span><button data-qty="${p.id}" data-change="1" aria-label="زيادة الكمية">＋</button></div></div>
       <button class="remove-item" data-remove="${p.id}" aria-label="حذف المنتج">×</button>
