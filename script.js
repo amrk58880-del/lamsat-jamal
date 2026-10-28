@@ -6,7 +6,7 @@
   3) عدّل المنتجات والأسعار والصور في مصفوفة products بالأسفل.
 */
 const STORE_NAME = "لمسة جمال";
-const WHATSAPP_NUMBER = "201031495730"; // استبدل الرقم برقم واتساب المتجر الحقيقي
+const WHATSAPP_NUMBER = "201XXXXXXXXX"; // استبدل الرقم برقم واتساب المتجر الحقيقي
 
 const products = [
   { id: 1, name: "سيروم ترطيب وإشراقة البشرة", category: "العناية بالبشرة", price: 320, oldPrice: 390, badge: "الأكثر طلبًا", rating: "★★★★★", image: "images/all-products/product-01.jpg" },
@@ -171,7 +171,7 @@ function sendToWhatsApp(customer = null) {
     showToast("ضيفي منتج واحد على الأقل للسلة الأول");
     return;
   }
-  if (WHATSAPP_NUMBER === "201031495730") {
+  if (WHATSAPP_NUMBER === "201XXXXXXXXX") {
     showToast("قبل استقبال الطلبات، غيّري رقم واتساب في ملف script.js");
     // نسمح بفتح واتساب للاختبار، مع تنبيه واضح أن الرقم تجريبي.
   }
